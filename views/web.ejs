@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html>
+<head>
+  
+    <title>Study Together</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    <!-- JS -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+    <script src="/static/js/bootstrap.bundle.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+    
+    <style> body{
+      background-image: url("https://blog.kakaocdn.net/dn/bEseLW/btqRXHoP0I3/EkgE56ZAjspyQTwnHEnrL0/img.jpg");
+      background-size: contain;
+    }</style>
+    <style>
+      .jumbotron{
+        background-image: url("https://png.pngtree.com/background/20220727/original/pngtree-cartoon-autumn-park-panorama-picture-image_1841191.jpg");
+        background-size: contain;
+      }
+    </style>
+</head>
+<body>
+  
+    <!-- header -->
+    <div class="jumbotron text-center mb-0">
+        <h1><a href="/web" style="color:white">Study Together</a></h1>
+        <p style="color:white">춘천시 스터디그룹 ! 공유, 질문, 스터디그룹</p>
+    </div>
+    <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+        
+      <a href="#" class="navbar-brand">나의 과목</a>
+      
+        <!-- Toggle Button -->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-between" id="collapsibleNavbar">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              
+              <li class="nav-item"><a href="/web" class="nav-link">홈</a></li>
+              <!--컴퓨터 -->
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  컴퓨터
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="C_tip">꿀팁</a></li>
+                  <li><a class="dropdown-item" href="C_qna">질문</a></li>
+                  <li><a class="dropdown-item" href="C_study">그룹모집</a></li>
+                </ul>
+              </li>
+              <!--토익,영어 -->
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  토익,영어
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="/E_tip">꿀팁</a></li>
+                  <li><a class="dropdown-item" href="/E_qna">질문</a></li>
+                  <li><a class="dropdown-item" href="/E_study">그룹모집</a></li>
+                </ul>
+              </li>
+              <!--수학 -->
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  수학
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="/M_tip">꿀팁</a></li>
+                  <li><a class="dropdown-item" href="/M_qna">질문</a></li>
+                  <li><a class="dropdown-item" href="/M_study">그룹모집</a></li>
+                </ul>
+              </li>
+
+              <!--국어 -->
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  국어
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="/K_tip">꿀팁</a></li>
+                  <li><a class="dropdown-item" href="/K_qna">질문</a></li>
+                  <li><a class="dropdown-item" href="/K_study">그룹모집</a></li>
+                </ul>
+              </li>
+              <!--공학 -->
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  공학
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="/EN_tip">꿀팁</a></li>
+                  <li><a class="dropdown-item" href="/EN_qna">질문</a></li>
+                  <li><a class="dropdown-item" href="/EN_study">그룹모집</a></li>
+                </ul>
+              </li>
+              <!--과학 -->
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  과학
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="/S_tip">꿀팁</a></li>
+                  <li><a class="dropdown-item" href="/S_qna">질문</a></li>
+                  <li><a class="dropdown-item" href="/S_study">그룹모집</a></li>
+                </ul>
+              </li>
+              <!--기타학문 -->
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  기타학문
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="/ETC_tip">꿀팁</a></li>
+                  <li><a class="dropdown-item" href="/ETC_qna">질문</a></li>
+                  <li><a class="dropdown-item" href="/ETC_study">그룹모집</a></li>
+                </ul>
+              </li>
+              <!--공지사항 -->
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  공지사항
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="/notice">공지</a></li>
+                  
+                </ul>
+              </li>
+              </ul>
+              
+                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" style="width:200px;height:30px;font-size:20px;">>
+                <button class="btn btn-outline-blue " type="submit">Search</button>
+              
+              <ul>
+              <li class="nav-item"><a href="/login" class="nav-link">로그아웃</a></li>  
+                
+            </ul>
+            
+        </div>
+        
+    </nav>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+    body {
+      font-family: "Lato", sans-serif;
+    }
+    
+    .sidebar {
+      height: 100%;
+      width: 0;
+      position: fixed;
+      z-index: 1;
+      top: 0;
+      left: 0;
+      background-color: rgb(216, 208, 150);
+      overflow-x: hidden;
+      transition: 0.5s;
+      padding-top: 60px;
+    }
+    
+    .sidebar a {
+      padding: 8px 8px 8px 32px;
+      text-decoration: none;
+      font-size: 25px;
+      color: #818181;
+      display: block;
+      transition: 0.3s;
+    }
+    
+    .sidebar a:hover {
+      color: #f1f1f1;
+    }
+    
+    .sidebar .closebtn {
+      position: absolute;
+      top: 0;
+      right: 25px;
+      font-size: 36px;
+      margin-right: 50px;
+    }
+    
+    .openbtn {
+      font-size: 20px;
+      cursor: pointer;
+      background-color: rgb(235, 240, 88);
+      color: black;
+      padding: 10px 15px;
+      border: none;
+    }
+    
+    .openbtn:hover {
+      background-color: rgb(235, 240, 88);
+    }
+    
+    #main {
+      transition: margin-right .5s;
+      padding: 16px;
+    }
+    
+    /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+    @media screen and (max-height: 450px) {
+      .sidebar {padding-top: 15px;}
+      .sidebar a {font-size: 18px;}
+    }
+    </style>
+    </head>
+    <body>
+    
+    <div id="mySidebar" class="sidebar" >
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+      <a href="C_tip" style="color: black">컴퓨터</a>  
+      <a href="E_tip" style="color: black">토익,영어</a>
+      <a href="M_tip" style="color: black">수학</a>
+      <a href="K_tip" style="color: black">국어</a>
+      <a href="EN_tip" style="color: black">공학</a>
+      <a href="S_tip" style="color: black">과학</a>
+      <a href="ETC_tip" style="color: black">기타학문</a>
+      <a href="notice" style="color: black">공지사항</a>
+    </div>
+    
+    <div id="main" style="display: inline-block; margin: 0 5px;">
+      <button class="openbtn" onclick="openNav()">☰</button>  
+    </div>
+    
+    <script>
+    function openNav() {
+      document.getElementById("mySidebar").style.width = "200px";
+      document.getElementById("main").style.marginRight = "250px";
+    }
+    
+    function closeNav() {
+      document.getElementById("mySidebar").style.width = "0";
+      document.getElementById("main").style.marginRight= "0";
+    }
+    </script>
+    <!-- content -->
+    <!---------------------------------------------------------------------------------------------------------------------------->>
+      <div id = "justify-content" class = "container">
+        <div class = "justify-content-center">
+      <div class="card border-dark mb-3" style="max-width: 1200px;">
+        <div class="row g-0" style="float: none; margin:100 auto;">
+          <div class="col-md-4" style="float: none; margin:0 auto;">
+            <img src="https://img1.daumcdn.net/thumb/R1280x0/?fname=http://t1.daumcdn.net/brunch/service/user/8fdM/image/EhwGwu3A28u4E3i0Fjzzfeu-n8Q.png" class="img-fluid rounded-start" alt="..." style="height: 300px">
+          </div>
+          <div class="col-md-8">
+            <div class="card-body">
+              
+              <h1 class="card-title">Let's Study Computer Science</h1>
+              <p class="card-text">최근 게시글 <font size="1"><a href="/C_tip"  style="color: gray"> 더 보기 </a></font></p>
+              
+              <% var count = 0; %>
+              <% for (var i = loginfo.length-1; i >=0; i --) { %> 
+                <% if (loginfo[i].id != null){   %>      
+                    <% continue; %>
+                <% } %>
+                <% if (count ==3){   %> 
+                  <% break; } %> 
+                <% count += 1; %>
+                <blockquote> 
+                  <div>                            
+                    <span style="font : Verdana"><font size="3"><a href="C_tip_view?num=count1" style="color: rgb(77, 74, 74)">&nbsp&nbsp&nbsp&nbsp&nbsp <b> ↳ <%= loginfo[i].title %></b></a></font></span>
+                  </div> 
+                </blockquote>
+              <% } %>
+              
+              <a href="/C_study" class="btn btn-outline-dark">스터디그룹 알아보러가기</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!---------------------------------------------------------------------------------------------------------------------------->>
+  <div id = "justify-content" class = "container">
+    <div class = "justify-content-center">
+  <div class="card border-dark mb-3" style="max-width: 1200px;">
+    <div class="row g-0" style="float: none; margin:100 auto;">
+      <div class="col-md-4" style="float: none; margin:0 auto;">
+        <img src="https://blog.kakaocdn.net/dn/pABbB/btqx81y0Dcz/rqnQiJ5HqrRFhjMtMhvgzK/img.jpg" class="img-fluid rounded-start" alt="..." style="height: 300px">
+      </div>
+      <div class="col-md-8">
+        <div class="card-body">
+          
+          <h1 class="card-title">Let's Study English & TOEIC</h1>
+          <p class="card-text">최근 게시글 <font size="1"><a href="/E_tip"  style="color: gray"> 더 보기 </a></font></p>
+          
+          <% var count = 0; %>
+          <% for (var i = loginfo2.length-1; i >=0; i --) { %> 
+            <% if (loginfo2[i].id != null){   %>      
+                <% continue; %>
+            <% } %>
+            <% if (count ==3){   %> 
+              <% break; } %> 
+            <% count += 1; %>
+            <blockquote> 
+              <div>                            
+                <font size="3"><a href="E_tip_view?num=count1" style="color: rgb(77, 74, 74)">&nbsp&nbsp&nbsp&nbsp&nbsp <b> ↳ <%= loginfo2[i].title %></b></a></font>
+              </div> 
+            </blockquote>
+          <% } %>
+          
+          <a href="/E_study" class="btn btn-outline-dark">스터디그룹 알아보러가기</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+<!---------------------------------------------------------------------------------------------------------------------------->>
+<div id = "justify-content" class = "container">
+  <div class = "justify-content-center">
+<div class="card border-dark mb-3" style="max-width: 1200px;">
+  <div class="row g-0" style="float: none; margin:100 auto;">
+    <div class="col-md-4" style="float: none; margin:0 auto;">
+      <img src="https://post-phinf.pstatic.net/MjAxODA1MTlfMTA5/MDAxNTI2NzA3OTgwNjg0.OD2wugBCsTRS9kwGNVGluFr54M5V4JMSeC_O4GFxHRog.U0PiYWwE5slzto9ct7WKZfJQlKvLO3riF2dJXGPNB5Ag.JPEG/%ED%8F%AC%EC%8A%A4%ED%8A%B8_%EA%B8%B0%EA%B3%84%EA%B3%B5%ED%95%99.jpg?type=w1200" class="img-fluid rounded-start" alt="..." style="height: 300px">
+    </div>
+    <div class="col-md-8">
+      <div class="card-body">
+        
+        <h1 class="card-title">Let's Study Engineering</h1>
+        <p class="card-text">최근 게시글 <font size="1"><a href="/EN_tip"  style="color: gray"> 더 보기 </a></font></p>
+        
+        <% var count = 0; %>
+        <% for (var i = loginfo3.length-1; i >=0; i --) { %> 
+          <% if (loginfo3[i].id != null){   %>      
+              <% continue; %>
+          <% } %>
+          <% if (count ==3){   %> 
+            <% break; } %> 
+          <% count += 1; %>
+          <blockquote> 
+            <div>                            
+              <font size="3"><a href="EN_tip_view?num=count1" style="color: rgb(77, 74, 74)">&nbsp&nbsp&nbsp&nbsp&nbsp <b> ↳ <%= loginfo3[i].title %></b></a></font>
+            </div> 
+          </blockquote>
+        <% } %>
+        
+        <a href="/EN_study" class="btn btn-outline-dark">스터디그룹 알아보러가기</a>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+</div>
+<!---------------------------------------------------------------------------------------------------------------------------->>
+<div id = "justify-content" class = "container">
+  <div class = "justify-content-center">
+<div class="card border-dark mb-3" style="max-width: 1200px;">
+  <div class="row g-0" style="float: none; margin:100 auto;">
+    <div class="col-md-4" style="float: none; margin:0 auto;">
+      <img src="http://cdn.edujin.co.kr/news/photo/202206/39150_78965_3535.png" class="img-fluid rounded-start" alt="..." style="height: 300px">
+    </div>
+    <div class="col-md-8">
+      <div class="card-body">
+        
+        <h1 class="card-title">Let's Study Korean</h1>
+        <p class="card-text">최근 게시글 <font size="1"><a href="/K_tip"  style="color: gray"> 더 보기 </a></font></p>
+        
+        <% var count = 0; %>
+        <% for (var i = loginfo4.length-1; i >=0; i --) { %> 
+          <% if (loginfo4[i].id != null){   %>      
+              <% continue; %>
+          <% } %>
+          <% if (count ==3){   %> 
+            <% break; } %> 
+          <% count += 1; %>
+          <blockquote> 
+            <div>                            
+              <font size="3"><a href="K_tip_view?num=count1" style="color: rgb(77, 74, 74)">&nbsp&nbsp&nbsp&nbsp&nbsp <b> ↳ <%= loginfo4[i].title %></b></a></font>
+            </div> 
+          </blockquote>
+        <% } %>
+        
+        <a href="/K_study" class="btn btn-outline-dark">스터디그룹 알아보러가기</a>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+</div>
+<!---------------------------------------------------------------------------------------------------------------------------->>
+<div id = "justify-content" class = "container">
+  <div class = "justify-content-center">
+<div class="card border-dark mb-3" style="max-width: 1200px;">
+  <div class="row g-0" style="float: none; margin:100 auto;">
+    <div class="col-md-4" style="float: none; margin:0 auto;">
+      <img src="https://t1.daumcdn.net/cfile/tistory/996F9E3B5AD36C4624" class="img-fluid rounded-start" alt="..." style="height: 300px">
+    </div>
+    <div class="col-md-8">
+      <div class="card-body">
+        
+        <h1 class="card-title">Let's Study Math</h1>
+        <p class="card-text">최근 게시글 <font size="1"><a href="/M_tip"  style="color: gray"> 더 보기 </a></font></p>
+        
+        <% var count = 0; %>
+        <% for (var i = loginfo5.length-1; i >=0; i --) { %> 
+          <% if (loginfo5[i].id != null){   %>      
+              <% continue; %>
+          <% } %>
+          <% if (count ==3){   %> 
+            <% break; } %> 
+          <% count += 1; %>
+          <blockquote> 
+            <div>                            
+              <font size="3"><a href="M_tip_view?num=count1" style="color: rgb(77, 74, 74)">&nbsp&nbsp&nbsp&nbsp&nbsp <b> ↳ <%= loginfo5[i].title %></b></a></font>
+            </div> 
+          </blockquote>
+        <% } %>
+        
+        <a href="/M_study" class="btn btn-outline-dark">스터디그룹 알아보러가기</a>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+</div>
+<!---------------------------------------------------------------------------------------------------------------------------->>
+<div id = "justify-content" class = "container">
+  <div class = "justify-content-center">
+<div class="card border-dark mb-3" style="max-width: 1200px;">
+  <div class="row g-0" style="float: none; margin:100 auto;">
+    <div class="col-md-4" style="float: none; margin:0 auto;">
+      <img src="https://previews.123rf.com/images/tul/tul1611/tul161100040/67681168-%EA%B3%BC%ED%95%99-%EC%B5%9C%EC%86%8C%ED%95%9C%EC%9D%98-%EC%96%87%EC%9D%80-%EB%9D%BC%EC%9D%B8-%EC%95%84%EC%9D%B4%EC%BD%98%EC%9D%84-%EC%84%A4%EC%A0%95-%EB%B2%A1%ED%84%B0-%EC%9D%BC%EB%9F%AC%EC%8A%A4%ED%8A%B8-%EB%A0%88%EC%9D%B4-%EC%85%98-%EB%94%94%EC%9E%90%EC%9D%B8-%EC%9A%94%EC%86%8C.jpg" class="img-fluid rounded-start" alt="..." style="height: 300px">
+    </div>
+    <div class="col-md-8">
+      <div class="card-body">
+        
+        <h1 class="card-title">Let's Study Science</h1>
+        <p class="card-text">최근 게시글 <font size="1"><a href="/S_tip"  style="color: gray"> 더 보기 </a></font></p>
+        
+        <% var count = 0; %>
+        <% for (var i = loginfo6.length-1; i >=0; i --) { %> 
+          <% if (loginfo6[i].id != null){   %>      
+              <% continue; %>
+          <% } %>
+          <% if (count ==3){   %> 
+            <% break; } %> 
+          <% count += 1; %>
+          <blockquote> 
+            <div>                            
+              <font size="3"><a href="S_tip_view?num=count1" style="color: rgb(77, 74, 74)">&nbsp&nbsp&nbsp&nbsp&nbsp <b> ↳ <%= loginfo6[i].title %></b></a></font>
+            </div> 
+          </blockquote>
+        <% } %>
+        
+        <a href="/S_study" class="btn btn-outline-dark">스터디그룹 알아보러가기</a>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+</div>
+<!---------------------------------------------------------------------------------------------------------------------------->>
+<div id = "justify-content" class = "container">
+  <div class = "justify-content-center">
+<div class="card border-dark mb-3" style="max-width: 1200px;">
+  <div class="row g-0" style="float: none; margin:100 auto;">
+    <div class="col-md-4" style="float: none; margin:0 auto;">
+      <img src="http://www.urbanbrush.net/web/wp-content/uploads/edd/2018/06/web-20180601062600683614.png" class="img-fluid rounded-start" alt="..." style="height: 300px">
+    </div>
+    <div class="col-md-8">
+      <div class="card-body">
+        
+        <h1 class="card-title">Let's Study Another</h1>
+        <p class="card-text">최근 게시글 <font size="1"><a href="/ETC_tip"  style="color: gray"> 더 보기 </a></font></p>
+        
+        <% var count = 0; %>
+        <% for (var i = loginfo7.length-1; i >=0; i --) { %> 
+          <% if (loginfo7[i].id != null){   %>      
+              <% continue; %>
+          <% } %>
+          <% if (count ==3){   %> 
+            <% break; } %> 
+          <% count += 1; %>
+          <blockquote> 
+            <div>                            
+              <font size="3"><a href="ETC_tip_view?num=count1" style="color: rgb(77, 74, 74)">&nbsp&nbsp&nbsp&nbsp&nbsp <b> ↳ <%= loginfo7[i].title %></b></a></font>
+            </div> 
+          </blockquote>
+        <% } %>
+        
+        <a href="/ETC_study" class="btn btn-outline-dark">스터디그룹 알아보러가기</a>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+</div>
+<!---------------------------------------------------------------------------------------------------------------------------->>
+    </div>
+    <div id = "justify-content" class = "container">
+      <div class = "justify-content-center">
+    <div class="card border-dark mb-3" style="max-width: 1200px;">
+      <div class="row g-0" style="float: none; margin:100 auto;">
+        <div class="col-md-4" style="float: none; margin:0 auto;">
+          <img src="https://png.pngtree.com/png-vector/20190511/ourmid/pngtree-vector-announcement-icon-png-image_1029339.jpg" class="img-fluid rounded-start" alt="..." style="height: 300px">
+        </div>
+        <div class="col-md-8">
+          <div class="card-body">
+            
+            <h1 class="card-title">Notice</h1>
+            <p class="card-text">최근 공지사항</p>
+            
+            <% var count = 0; %>
+            <% for (var i = loginfo8.length-1; i >=0; i --) { %> 
+              <% if (loginfo8[i].id != null){   %>      
+                  <% continue; %>
+              <% } %>
+              <% if (count ==3){   %> 
+                <% break; } %> 
+              <% count += 1; %>
+              <blockquote> 
+                <div>                            
+                  <font size="3"><a href="NOTICE_view?num=count1" style="color: rgb(77, 74, 74)">&nbsp&nbsp&nbsp&nbsp <b> ↳ <%= loginfo8[i].title %></b></a></font>
+                </div> 
+              </blockquote>
+            <% } %>
+            
+            <a href="/NOTICE" class="btn btn-outline-dark">더보기</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+    </div>
+    <!-- footer -->
+    <footer class = "footer">
+      <div align="right" >
+        </br></br></br></br>
+        <hr style="border:0; height:1px; background: #000;"></hr>
+          <font size="2"><a style="color: rgb(77, 74, 74)"><b> ☏ : 010-1234-5678 %></b></a></font>
+          <font size="2"><a style="color: rgb(77, 74, 74)"><b> &nbsp&nbsp&nbsp&nbsp ✉ : example@hallym.ac.kr %></b></a></font>
+        </br></br></br></br>
+      </div>
+    </footer>
+
+</body>
+
+</html>
+​

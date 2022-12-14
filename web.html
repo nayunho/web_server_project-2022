@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Study Together</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    <!-- JS -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+    <script src="/static/js/bootstrap.bundle.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+    
+    <style> body{
+      background-image: url("https://blog.kakaocdn.net/dn/bEseLW/btqRXHoP0I3/EkgE56ZAjspyQTwnHEnrL0/img.jpg");
+      background-size: cover;
+    }
+    .menu {
+      
+  position: fixed;
+  width: 300px;
+  overflow: hidden;
+  margin: 150px auto;
+  top: 150px;
+  left: 1700px;
+}
+
+.menu > li {
+  width: 100%;
+  text-align: center;
+  line-height: 40px;
+  background-color: #fb9c04;
+}
+    
+    .menu a {
+      color: #fff;
+    }
+    
+    .submenu > li {
+      line-height: 50px;
+      background-color: #fdb13e;
+    }
+    
+    .submenu {
+      height: 0; /*ul의 높이를 안보이게 처리*/
+      overflow: hidden;
+    }
+    .menu > li:hover {
+  background-color: #fdb13e;
+  transition-duration: 0.5s;
+}
+
+.menu > li:hover .submenu {
+  height: 150px; /*서브메뉴 li한개의 높이 50*5*/
+  transition-duration: 1s;
+}
+  </style> 
+</head>
+<body>
+  <style type="text/css">
+    .jumbotron{
+      background-image: url(https://www.brandbucket.com/sites/default/files/logo_uploads/334812/large_studygroup.io.png);
+      background-repeat: no-repeat;
+      background-size: 100% 100%;
+      text-shadow: rgb(230, 230, 8) 0.2em 0.2em 0.2em;
+      color:rgb(9, 17, 233);
+    }
+</style>
+    <!-- header -->
+    <div class="jumbotron text-center mb-0">
+      <a href="/web" class="on"><h1>Study Together</h1></a>
+        <p>춘천시 스터디그룹 ! 공유, 질문, 스터디그룹</p>
+    </div>
+    
+    <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+        
+      <a href="#" class="navbar-brand">나의 과목</a>
+        <!-- Toggle Button -->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-between" id="collapsibleNavbar">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              
+              <li class="nav-item"><a href="/web" class="nav-link">홈</a></li>
+              <!--컴퓨터 -->
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  컴퓨터
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="C_tip">꿀팁</a></li>
+                  <li><a class="dropdown-item" href="C_qna">질문</a></li>
+                  <li><a class="dropdown-item" href="C_study">그룹모집</a></li>
+                </ul>
+              </li>
+              <!--토익,영어 -->
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  토익,영어
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="/E_tip">꿀팁</a></li>
+                  <li><a class="dropdown-item" href="/E_qna">질문</a></li>
+                  <li><a class="dropdown-item" href="/E_study">그룹모집</a></li>
+                </ul>
+              </li>
+              <!--수학 -->
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  수학
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="/M_tip">꿀팁</a></li>
+                  <li><a class="dropdown-item" href="/M_qna">질문</a></li>
+                  <li><a class="dropdown-item" href="/M_study">그룹모집</a></li>
+                </ul>
+              </li>
+
+              <!--국어 -->
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  국어
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="/K_tip">꿀팁</a></li>
+                  <li><a class="dropdown-item" href="/K_qna">질문</a></li>
+                  <li><a class="dropdown-item" href="/K_study">그룹모집</a></li>
+                </ul>
+              </li>
+              <!--공학 -->
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  공학
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="/EN_tip">꿀팁</a></li>
+                  <li><a class="dropdown-item" href="/EN_qna">질문</a></li>
+                  <li><a class="dropdown-item" href="/EN_study">그룹모집</a></li>
+                </ul>
+              </li>
+              <!--과학 -->
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  과학
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="/S_tip">꿀팁</a></li>
+                  <li><a class="dropdown-item" href="/S_qna">질문</a></li>
+                  <li><a class="dropdown-item" href="/S_study">그룹모집</a></li>
+                </ul>
+              </li>
+              <!--기타학문 -->
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  기타학문
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="/ETC_tip">꿀팁</a></li>
+                  <li><a class="dropdown-item" href="/ETC_qna">질문</a></li>
+                  <li><a class="dropdown-item" href="/ETC_study">그룹모집</a></li>
+                </ul>
+              </li>
+              <!--공지사항 -->
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  공지사항
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="/notice">공지</a></li>
+                  
+                </ul>
+              </li>
+              </ul>
+
+              <ul>
+              <li class="nav-item"><a href="/login" class="nav-link">로그아웃</a></li>  
+            </ul>
+            
+        </div>
+    </nav>
+    <!-- content -->
+    <ul class="menu">
+      <li>
+        <a href="#">Computer</a>
+        <ul class="submenu">
+          <li><a href="/">꿀팁</a></li>
+          <li><a href="#">질문</a></li>
+          <li><a href="#">그룹모집</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="#">TOEIC</a>
+        <ul class="submenu">
+          <li><a href="#">꿀팁</a></li>
+          <li><a href="#">질문</a></li>
+          <li><a href="#">그룹모집</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="#">Engineering</a>
+        <ul class="submenu">
+          <li><a href="C_tip">꿀팁</a></li>
+          <li><a href="#">질문</a></li>
+          <li><a href="#">그룹모집</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="#">Science</a>
+        <ul class="submenu">
+          <li><a href="#">꿀팁</a></li>
+          <li><a href="#">질문</a></li>
+          <li><a href="#">그룹모집</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="#">Korean</a>
+        <ul class="submenu">
+          <li><a href="#">꿀팁</a></li>
+          <li><a href="#">질문</a></li>
+          <li><a href="#">그룹모집</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="#">MATH</a>
+        <ul class="submenu">
+          <li><a href="#">꿀팁</a></li>
+          <li><a href="#">질문</a></li>
+          <li><a href="#">그룹모집</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="#">etc.</a>
+        <ul class="submenu">
+          <li><a href="#">꿀팁</a></li>
+          <li><a href="#">질문</a></li>
+          <li><a href="#">그룹모집</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="#">Notice</a>
+        <ul class="submenu">
+          <li><a href="#">공지사항</a></li>
+        </ul>
+      </li>
+    </ul>
+    <div class="container">
+      <div class="row">
+        <div class="col-3">
+          <div class="card">
+            <div class="card-header">
+              Computer
+            </div>
+            <img src="https://cdn.pixabay.com/photo/2020/10/22/06/25/computer-5675047_1280.png" alt="" style="height: 200px"/>
+            <div class="card-body">
+              <h5 class="card-title">Computer</h5>
+              <p class="card-text">컴퓨터 스터디그룹</p>
+              <a href="/C_study" class="btn btn-outline-dark">스터디그룹 알아보러가기</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-3">
+          <div class="card">
+            <div class="card-header">
+              TOEIC
+            </div>
+            <img src="http://www.veritas-a.com/news/photo/201705/82510_62805_522.jpg" alt="" style="height: 200px"/>
+            <div class="card-body">
+              <h5 class="card-title">TOEIC</h5>
+              <p class="card-text">토익 스터디그룹</p>
+              <a href="E_study" class="btn btn-outline-dark">스터디그룹 알아보러가기</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-3">
+          <div class="card">
+            <div class="card-header">
+              Engineering
+            </div>
+            <img src="https://post-phinf.pstatic.net/MjAxODA1MTlfMTA5/MDAxNTI2NzA3OTgwNjg0.OD2wugBCsTRS9kwGNVGluFr54M5V4JMSeC_O4GFxHRog.U0PiYWwE5slzto9ct7WKZfJQlKvLO3riF2dJXGPNB5Ag.JPEG/%ED%8F%AC%EC%8A%A4%ED%8A%B8_%EA%B8%B0%EA%B3%84%EA%B3%B5%ED%95%99.jpg?type=w1200" alt="" style="height: 200px"/>
+            <div class="card-body">
+              <h5 class="card-title">Engineering</h5>
+              <p class="card-text">공학 스터디그룹</p>
+              <a href="EN_study" class="btn btn-outline-dark">스터디그룹 알아보러가기</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-3">
+          <div class="card">
+            <div class="card-header">
+              Science
+            </div>
+            <img src="http://image.dongascience.com/Photo/2022/04/0ee547e28492c99a49cbd3a4db43b86d.jpg" alt="" style="height: 200px"/>
+            <div class="card-body">
+              <h5 class="card-title">Science</h5>
+              <p class="card-text">과학 스터디그룹</p>
+              <a href="S_study" class="btn btn-outline-dark">스터디그룹 알아보러가기</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-3">
+          <div class="card">
+            <div class="card-header">
+              Korean
+            </div>
+            <img src="http://cdn.edujin.co.kr/news/photo/202206/39150_78965_3535.png" alt="" style="height: 200px"/>
+            <div class="card-body">
+              <h5 class="card-title">Korean</h5>
+              <p class="card-text">국어 스터디그룹</p>
+              <a href="k_study" class="btn btn-outline-dark">스터디그룹 알아보러가기</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-3">
+          <div class="card">
+            <div class="card-header">
+              Math
+            </div>
+            <img src="https://t1.daumcdn.net/cfile/tistory/996F9E3B5AD36C4624" alt="" style="height: 200px"/>
+            <div class="card-body">
+              <h5 class="card-title">MATH</h5>
+              <p class="card-text">수학 스터디그룹</p>
+              <a href="M_study" class="btn btn-outline-dark">스터디그룹 알아보러가기</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-3">
+          <div class="card">
+            <div class="card-header">
+              etc.
+            </div>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTmZ9DQddv5cgXDX_DNW0pDOkmhGPjatE7MAg&usqp=CAU" alt="" style="height: 200px"/>
+            <div class="card-body">
+              <h5 class="card-title">etc.</h5>
+              <p class="card-text">기타학문 스터디그룹</p>
+              <a href="ETC_study" class="btn btn-outline-dark">스터디그룹 알아보러가기</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-3">
+          <div class="card">
+            <div class="card-header">
+              Notice
+            </div>
+            <img src="https://developers.kakao.com/static/images/m/product/sub/notifications.png" alt="" style="height: 200px"/>
+            <div class="card-body">
+              <h5 class="card-title">Notice</h5>
+              <p class="card-text">공지사항</p>
+              <a href="/notice" class="btn btn-outline-dark">공지사항</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- footer -->
+
+</body>
+</html>
+​

@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+  <link href="http://localhost:8080/css.css?after" type="text/css" rel = "stylesheet">
+    <title>Study Together</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    <!-- JS -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+    <script src="/static/js/bootstrap.bundle.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+    <style> body{
+      background-image: url("https://blog.kakaocdn.net/dn/bEseLW/btqRXHoP0I3/EkgE56ZAjspyQTwnHEnrL0/img.jpg");
+      background-size: cover;
+    }</style>
+    <style>
+      .jumbotron{
+        background-image: url("https://png.pngtree.com/background/20220727/original/pngtree-cartoon-autumn-park-panorama-picture-image_1841191.jpg");
+        background-size: contain;
+      }
+      @media (min-width: 768px) {
+        .container {
+          width: 750px;
+        }
+      }
+      
+      @media (min-width: 92px) {
+        .container {
+          width: 840px;
+        }
+      }
+      </style>
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    </style>
+</head>
+<body>
+  <form action="/M_add1" method="POST">
+    <!-- header -->
+    <div class="jumbotron text-center mb-0">
+        <h1><a href="/web" style="color:white">Study Together</a></h1>
+        <p style="color:white">춘천시 스터디그룹 ! 공유, 질문, 스터디그룹</p>
+    </div>
+    <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+        
+      <a href="#" class="navbar-brand">나의 과목</a>
+      
+        <!-- Toggle Button -->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-between" id="collapsibleNavbar">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              
+              <li class="nav-item"><a href="/web" class="nav-link">홈</a></li>
+              <!--컴퓨터 -->
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  컴퓨터
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="C_tip">꿀팁</a></li>
+                  <li><a class="dropdown-item" href="C_qna">질문</a></li>
+                  <li><a class="dropdown-item" href="C_study">그룹모집</a></li>
+                </ul>
+              </li>
+              <!--토익,영어 -->
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  토익,영어
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="/E_tip">꿀팁</a></li>
+                  <li><a class="dropdown-item" href="/E_qna">질문</a></li>
+                  <li><a class="dropdown-item" href="/E_study">그룹모집</a></li>
+                </ul>
+              </li>
+              <!--수학 -->
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  수학
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="/M_tip">꿀팁</a></li>
+                  <li><a class="dropdown-item" href="/M_qna">질문</a></li>
+                  <li><a class="dropdown-item" href="/M_study">그룹모집</a></li>
+                </ul>
+              </li>
+
+              <!--국어 -->
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  국어
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="/K_tip">꿀팁</a></li>
+                  <li><a class="dropdown-item" href="/K_qna">질문</a></li>
+                  <li><a class="dropdown-item" href="/K_study">그룹모집</a></li>
+                </ul>
+              </li>
+              <!--공학 -->
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  공학
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="/EN_tip">꿀팁</a></li>
+                  <li><a class="dropdown-item" href="/EN_qna">질문</a></li>
+                  <li><a class="dropdown-item" href="/EN_study">그룹모집</a></li>
+                </ul>
+              </li>
+              <!--과학 -->
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  과학
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="/S_tip">꿀팁</a></li>
+                  <li><a class="dropdown-item" href="/S_qna">질문</a></li>
+                  <li><a class="dropdown-item" href="/S_study">그룹모집</a></li>
+                </ul>
+              </li>
+              <!--기타학문 -->
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  기타학문
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="/ETC_tip">꿀팁</a></li>
+                  <li><a class="dropdown-item" href="/ETC_qna">질문</a></li>
+                  <li><a class="dropdown-item" href="/ETC_study">그룹모집</a></li>
+                </ul>
+              </li>
+              <!--공지사항 -->
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  공지사항
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="/notice">공지</a></li>
+                  
+                </ul>
+              </li>
+              <ul>
+                <li class="nav-item"><a href="/login"class="nav-link" style="text-align: right"> 로그아웃</a></li>  
+              </ul>
+            
+        </div>
+    </nav>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+    body {
+      font-family: "Lato", sans-serif;
+    }
+    
+    .sidebar {
+      height: 100%;
+      width: 0;
+      position: fixed;
+      z-index: 1;
+      top: 0;
+      left: 0;
+      background-color: rgb(216, 208, 150);
+      overflow-x: hidden;
+      transition: 0.5s;
+      padding-top: 60px;
+    }
+    
+    .sidebar a {
+      padding: 8px 8px 8px 32px;
+      text-decoration: none;
+      font-size: 25px;
+      color: #818181;
+      display: block;
+      transition: 0.3s;
+    }
+    
+    .sidebar a:hover {
+      color: #f1f1f1;
+    }
+    
+    .sidebar .closebtn {
+      position: absolute;
+      top: 0;
+      right: 25px;
+      font-size: 36px;
+      margin-right: 50px;
+    }
+    
+    .openbtn {
+      font-size: 20px;
+      cursor: pointer;
+      background-color: rgb(235, 240, 88);
+      color: black;
+      padding: 10px 15px;
+      border: none;
+    }
+    
+    .openbtn:hover {
+      background-color: rgb(235, 240, 88);
+    }
+    
+    #main {
+      transition: margin-right .5s;
+      padding: 16px;
+    }
+    
+    /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+    @media screen and (max-height: 450px) {
+      .sidebar {padding-top: 15px;}
+      .sidebar a {font-size: 18px;}
+    }
+    </style>
+    </head>
+    <body>
+    
+    <div id="mySidebar" class="sidebar" >
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+      <a href="C_tip" style="color: black">컴퓨터</a>  
+      <a href="E_tip" style="color: black">토익,영어</a>
+      <a href="M_tip" style="color: black">수학</a>
+      <a href="K_tip" style="color: black">국어</a>
+      <a href="EN_tip" style="color: black">공학</a>
+      <a href="S_tip" style="color: black">과학</a>
+      <a href="ETC_tip" style="color: black">기타학문</a>
+      <a href="notice" style="color: black">공지사항</a>
+    </div>
+    
+    <div id="main" style="display: inline-block; margin: 0 5px;">
+      <button class="openbtn" onclick="openNav()">☰</button>  
+    </div>
+    
+    <script>
+    function openNav() {
+      document.getElementById("mySidebar").style.width = "200px";
+      document.getElementById("main").style.marginRight = "250px";
+    }
+    
+    function closeNav() {
+      document.getElementById("mySidebar").style.width = "0";
+      document.getElementById("main").style.marginRight= "0";
+    }
+    </script>
+    <!--content-->
+    
+    <div class="board_wrap">
+        <div class="board_title">
+            <strong>Math</strong>
+            <p>자신의 수학지식을 공유해주세요 !</p>
+        </div>
+        <div class="board_write_wrap">
+          
+            <div class="board_write">
+              
+                <div class="title">
+                  
+                    <dl>
+                        <dt>제목</dt>
+                        <dd><input type="text" name = "title" placeholder="제목 입력"></dd>
+                    </dl>
+                </div>
+                <div class="info">
+                    <dl>
+                        <dt>글쓴이</dt>
+                        <dd><input type="text" name = "nickname" placeholder="글쓴이 입력"></dd>
+                    </dl>
+                    
+                </div>
+                <div class="cont">
+                    <textarea input type="text" name = "contents" placeholder="내용 입력"></textarea>
+                </div>
+              
+            </div>
+
+            <div>
+              <button type="submit" onclick="location.href='/M_tip_view' " class="btn btn-primary">등록</button>
+              <button type = "button" onclick="location.href='/M_tip' " class="btn btn-primary">취소</button> 
+            </div>
+          
+          
+        </div>
+    </div>
+    </form>
+    </body>
+    </html> 
